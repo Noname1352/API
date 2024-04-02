@@ -14,6 +14,10 @@ const db = new sqlite3.Database('database.db')
 let sql = 'CREATE TABLE IF NOT EXISTS users(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, gender TEXT, password TEXT)'
 db.run(sql)
 
+app.get("/", function(_, response) {
+    response.send('Сервер запущен')
+})
+
 app.post("/login", function (request, response) {
     let data = ""
     request.on("data", chunk => {
