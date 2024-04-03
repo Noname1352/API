@@ -3,6 +3,7 @@ const cors = require('cors');
 const app = express();
 const sqlite3 = require('sqlite3')
 
+console.log('h')
 const corsOptions ={
     origin:'http://localhost:5173', 
     credentials:true,
